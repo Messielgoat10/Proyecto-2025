@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de Inventario - Inicio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="bg-soft">
+
+
+<script>
+  if(localStorage.getItem("sesion") !== "activa"){
+    window.location.href = "login.html";
+  }
+</script>
+
+<header class="container py-4">
+  <div class="d-flex align-items-center justify-content-between">
+    <h1 class="h4 m-0">Sistema de Inventario - Supermercado</h1>
+
+    <nav class="d-flex gap-2">
+      <a class="btn btn-outline-secondary btn-sm" href="index.html">Inicio</a>
+      <a class="btn btn-outline-secondary btn-sm" href="productos.html">Productos</a>
+      <a class="btn btn-outline-secondary btn-sm" href="proveedores.html">Proveedores</a>
+
+      
+      <button class="btn btn-danger btn-sm" onclick="cerrarSesion()">Cerrar sesión</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="row g-4">
+    
+    <article class="col-12 col-md-6 col-lg-4">
+      <a href="productos.html" class="card card-hover h-100 text-decoration-none text-dark">
+        <div class="card-body d-flex flex-column">
+          <div class="mb-3 display-icon">🛒</div>
+          <h5 class="card-title">Gestión de Productos</h5>
+          <p class="card-text flex-grow-1">Listado, creación y edición de productos.</p>
+          <div class="text-end"><span class="badge bg-soft-primary">Ver</span></div>
+        </div>
+      </a>
+    </article>
+
+    <article class="col-12 col-md-6 col-lg-4">
+      <a href="proveedores.html" class="card card-hover h-100 text-decoration-none text-dark">
+        <div class="card-body d-flex flex-column">
+          <div class="mb-3 display-icon">🏪</div>
+          <h5 class="card-title">Proveedores</h5>
+          <p class="card-text flex-grow-1">Administrar proveedores: contactos y datos básicos.</p>
+          <div class="text-end"><span class="badge bg-soft-primary">Ver</span></div>
+        </div>
+      </a>
+    </article>
+
+    <article class="col-12 col-md-6 col-lg-4">
+      <a href="inventario.html" class="card card-hover h-100 text-decoration-none text-dark">
+        <div class="card-body d-flex flex-column">
+          <div class="mb-3 display-icon">⚙️</div>
+          <h5 class="card-title">Inventario</h5>
+          <p class="card-text flex-grow-1">Página base de inventario.</p>
+          <div class="text-end"><span class="badge bg-soft-primary">Ver</span></div>
+        </div>
+      </a>
+    </article>
+
+  </section>
+</main>
+
+<footer class="container py-4 text-muted small text-center">Supermarket UG</footer>
+
+<script>
+function cerrarSesion(){
+  localStorage.removeItem("sesion");
+  window.location.href = "login.html";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
