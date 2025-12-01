@@ -1,0 +1,53 @@
+
+:root{
+  --bg-soft: #f7fafc;
+  --card-bg: #ffffff;
+  --soft-primary: #e6f0ff;
+  --primary: #5b8df7;
+  --muted: #6b7280;
+}
+
+body.bg-soft{ background: var(--bg-soft); color: #111827; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+.card-hover{
+  background: var(--card-bg);
+  border-radius: 12px;
+  transition: transform .22s ease, box-shadow .22s ease;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+
+.card-hover:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(15,23,42,0.12);
+  text-decoration: none;
+}
+
+.display-icon{
+  font-size: 34px;
+  line-height: 1;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--soft-primary);
+  color: var(--primary);
+}
+
+.badge.bg-soft-primary{
+  background: linear-gradient(90deg, rgba(91,141,247,0.12), rgba(91,141,247,0.08));
+  color: var(--primary);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: .35rem .6rem;
+}
+.table td, .table th{ vertical-align: middle; }
+
+.card{ border: none; border-radius: 12px; }
+
+.form-control:focus, .form-select:focus{
+  box-shadow: 0 6px 18px rgba(91,141,247,0.12);
+  border-color: var(--primary);
+  outline: none;
+}
